@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton Loader</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="skeleton-container">
+        <!-- Line S -->
+        <div class="skeleton" data-width="40%" data-height="0.75rem" data-radius="0.25rem"></div>
+        
+        <!-- Line M -->
+        <div class="skeleton" data-width="70%" data-height="1.75rem" data-radius="0.25rem"></div>
+        
+        <!-- Line L -->
+        <div class="skeleton" data-width="100%" data-height="2.5rem" data-radius="0.25rem"></div>
+
+        <!-- Circle -->
+        <div class="skeleton" data-width="5rem" data-height="5rem" data-radius="50%"></div>
+
+        <!-- Square -->
+        <div class="skeleton" data-width="5rem" data-height="5rem" data-radius="0.25rem"></div>
+
+        <!-- Card -->
+        <div class="skeleton" data-width="10rem" data-height="16rem" data-radius="0.25rem"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const skeletons = document.querySelectorAll('.skeleton');
+
+            skeletons.forEach(skeleton => {
+                const width = skeleton.getAttribute('data-width');
+                const height = skeleton.getAttribute('data-height');
+                const radius = skeleton.getAttribute('data-radius');
+
+                if (width) {
+                    skeleton.style.width = width;
+                }
+
+                if (height) {
+                    skeleton.style.height = height;
+                }
+                if (height) {
+                    skeleton.style.borderRadius = radius;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

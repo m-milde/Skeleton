@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton Loader</title>
+    <link rel="stylesheet" href="css/styles-test.css">
+</head>
+<body>
+
+    <div class="accordion-wrapper">
+        <div class="input-container">
+            <div class="skeleton" data-width="30rem" data-height="1.25rem" data-radius="0.25%"></div>
+            <div class="skeleton" data-width="30rem" data-height="3rem" data-radius="0.25%"></div>
+        </div>
+        <div class="input-container">
+            <div class="skeleton" data-width="30rem" data-height="1.25rem" data-radius="0.25%"></div>
+            <div class="skeleton" data-width="30rem" data-height="3rem" data-radius="0.25%"></div>
+        </div>
+        <div class="input-container">
+            <div class="skeleton" data-width="30rem" data-height="1.25rem" data-radius="0.25%"></div>
+            <div class="skeleton" data-width="30rem" data-height="3rem" data-radius="0.25%"></div>
+        </div>
+    </div>
+
+    <div class="accordion-wrapper">
+        <div class="accordion-container">
+            <div class="skeleton" data-width="1.5rem" data-height="1.5rem" data-radius="0.25%"></div>
+            <div class="skeleton" data-width="30rem" data-height="3rem" data-radius="0.25%"></div>
+        </div>
+        <div class="accordion-container">
+            <div class="skeleton" data-width="1.5rem" data-height="1.5rem" data-radius="0.25%"></div>
+            <div class="skeleton" data-width="30rem" data-height="3rem" data-radius="0.25%"></div>
+        </div>
+        <div class="accordion-container">
+            <div class="skeleton" data-width="1.5rem" data-height="1.5rem" data-radius="0.25%"></div>
+            <div class="skeleton" data-width="30rem" data-height="3rem" data-radius="0.25%"></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const skeletons = document.querySelectorAll('.skeleton');
+
+            skeletons.forEach(skeleton => {
+                const width = skeleton.getAttribute('data-width');
+                const height = skeleton.getAttribute('data-height');
+                const radius = skeleton.getAttribute('data-radius');
+
+                if (width) {
+                    skeleton.style.width = width;
+                }
+
+                if (height) {
+                    skeleton.style.height = height;
+                }
+                if (height) {
+                    skeleton.style.borderRadius = radius;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
