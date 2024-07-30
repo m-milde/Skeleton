@@ -39,9 +39,9 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const skeletons = document.querySelectorAll('.skeleton');
+            const skeleton = document.querySelectorAll('.skeleton');
 
-            skeletons.forEach(skeleton => {
+            skeleton.forEach(skeleton => {
                 const width = skeleton.getAttribute('data-width');
                 const height = skeleton.getAttribute('data-height');
                 const radius = skeleton.getAttribute('data-radius');
