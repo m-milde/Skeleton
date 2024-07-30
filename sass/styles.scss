@@ -1,12 +1,6 @@
 $gradient-start: #ECEEF1;
 $gradient-middle: #F9F9F9;
 
-@keyframes loading {
-  to {
-    background-position: -200% 0;
-  }
-}
-
 .skeleton {
   background: linear-gradient(90deg,$gradient-start 25%,$gradient-middle 50%,$gradient-start 75%
   );
@@ -17,6 +11,12 @@ $gradient-middle: #F9F9F9;
   height: attr(data-height);
   border-radius: attr(data-radius);
 
+  @keyframes loading {
+    to {
+      background-position: -200% 0;
+    }
+  }
+  
   &.skeleton-chart{
     display: flex;
     align-items: center;
