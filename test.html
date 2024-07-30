@@ -45,6 +45,7 @@
                 const width = skeleton.getAttribute('data-width');
                 const height = skeleton.getAttribute('data-height');
                 const radius = skeleton.getAttribute('data-radius');
+                const center = skeleton.hasAttribute('data-center');
 
                 if (width) {
                     skeleton.style.width = width;
@@ -53,8 +54,15 @@
                 if (height) {
                     skeleton.style.height = height;
                 }
-                if (height) {
+
+                if (radius) {
                     skeleton.style.borderRadius = radius;
+                }
+
+                if (center) {
+                    skeleton.style.display = 'flex';
+                    skeleton.style.alignItems = 'center';
+                    skeleton.style.justifyContent = 'center';
                 }
             });
         });
